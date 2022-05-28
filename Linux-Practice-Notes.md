@@ -2,12 +2,12 @@
 
 ## 5/28/2022:
 
-**<u>\# cut commad:</u>**
+### \# cut commad:
 
 <img src="./images/Linux-Practice-Notes/media/image1.png"
 style="width:6.5in;height:3.47917in" />
 
-**<u>\# grep command:</u>**
+### \# grep command:
 
 Problem 1 : Write a command to count the number of code lines in a shell
 script:
