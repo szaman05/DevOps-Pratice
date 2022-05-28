@@ -9,7 +9,7 @@ style="width:6.5in;height:3.47917in" />
 
 **<u>\# grep command:</u>**
 
-Problem: Write a command to count the number of code lines in a shell
+Problem 1 : Write a command to count the number of code lines in a shell
 script:
 
 Solution: grep -Ev '^#\|^$' mdConvert.sh \| wc -l
