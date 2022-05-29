@@ -1,4 +1,4 @@
-## 5/28/2022:
+5/28/2022:
 
 Q: How to stop concurrent build?
 
@@ -85,3 +85,17 @@ A: /var/lib/Jenkins/tools
 Q: What is the plugin you use to deploy the artifact to tomcat server?
 
 A: Deploy to container.
+
+Q: In How many ways you can trigger build automatically?
+
+A: 3 Ways
+
+1.  Pool SCM: crontab runs
+
+2.  Periodically:
+
+3.  Github hook:
+
+Q: How Jenkins knows if the source code has been changed to GitHub?
+
+A: with the git commit ID.
