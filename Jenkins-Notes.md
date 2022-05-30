@@ -100,3 +100,88 @@ A: 3 Ways
 **Q: How Jenkins knows if the source code has been changed to GitHub?**
 
 A: with the git commit ID.
+
+**Q: What is the difference between tools and plugin?**
+
+A: Manage Jenkins \> Global Tools configuration. It’s basically the
+software we need to run the job. Such as java, maven etc.
+
+**Q: Have you used any Global variable in Jenkins? If so, where?**
+
+A: Yes, I have used global variable to do versioning of artifact through
+shell script after build.
+
+I have used $BUILD_ID
+
+**Q: How you do versioning of your Artifact in Jenkins?**
+
+A: I have used global variable to do versioning of artifact through
+shell script after build.
+
+I have used $BUILD_ID
+
+**Q: What is a workspace?**
+
+A:
+
+**Q: What plugins did you use in your project?**
+
+A:
+
+-   Deploy to Container
+
+-   Deploy WebLogic
+
+-   Maven Integration
+
+-   Safe Restart
+
+-   Next Build Number
+
+-   JACOCO
+
+-   SSH Agent
+
+-   Email Extension
+
+> <img src="./images/Jenkins-Notes/media/image1.png"
+> style="width:6.5in;height:5.19444in" />
+
+**Q: Can you explain the pipeline flow you made?**
+
+A:
+
+Dev Commit to GitHub Jenkins Pull the codes from Repo Maven Build the
+code
+
+Maven performs Junit Test SonarQube scan the codes and verify the
+Quality Gate
+
+Finally upload the Artifact to Nexus
+
+Q: **what are the pipeline ways available?**
+
+A: 2 types are there:
+
+-   Scripted
+
+-   Declarative We are using in our project.
+
+Q: How to you integrate sonarqube with Jenkins?
+
+A:
+
+1.  Install sonar scanner plugin
+
+2.  Under global tools select sonar scanner version and give it a name
+
+3.  Configure server and add sonarqube server url, save it
+    <img src="./images/Jenkins-Notes/media/image2.png"
+    style="width:6.5in;height:4.8875in" />
+
+4.  Come back to configure server and sonqube add token generated in
+    sonarqube<img src="./images/Jenkins-Notes/media/image3.png"
+    style="width:6.5in;height:6.27014in" />
+
+5.  Remember at 1<sup>st</sup> you have to add the url to add the
+    credential (token in this case)
