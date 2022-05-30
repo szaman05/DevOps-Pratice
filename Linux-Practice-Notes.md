@@ -41,8 +41,9 @@ Q: show a script from line 12 to 18 only.
 A:
 
 -   sed -n 12,18p mdConvert.sh
-    <img src="./images/Linux-Practice-Notes/media/image4.png"
-    style="width:5.71875in;height:1.44792in" />
+
+<img src="./images/Linux-Practice-Notes/media/image4.png"
+style="width:5.71875in;height:1.44792in" />
 
 Q: show a script discard/hide line 12 to 18.
 
