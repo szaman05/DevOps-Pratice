@@ -16,3 +16,22 @@ Solution: grep -Ev '^#\|^$' mdConvert.sh \| wc -l
 
 <img src="./images/Linux-Practice-Notes/media/image2.png"
 style="width:6.04167in;height:3.51042in" />
+
+# 5/30/2022:
+
+#### \# sed command:
+
+Q: Replace a variable name globally inside a shell script.
+
+A:
+
+-   Change and Display output to screen: sed 's/docxName/docuName/g'
+    mdConvert.sh
+
+-   Change and Insert into the file: sed -i 's/docxName/docuName/g'
+    mdConvert.sh
+
+-   Change 1<sup>st</sup> occurrence of every line only: sed
+    's/docxName/docuName/1'
+    mdConvert.sh<img src="./images/Linux-Practice-Notes/media/image3.png"
+    style="width:6.5in;height:3.20486in" />
