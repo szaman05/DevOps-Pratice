@@ -20,7 +20,7 @@ placement
 
 • **Dedicated Instances:** no other customers will share your hardware
 
-Steps to lunch a EC2:
+## Steps to launch a EC2:
 
 1.  Name & Tag<img src="./images/EC2/media/image1.png"
     style="width:6.5in;height:2.01319in" />
@@ -50,27 +50,26 @@ Steps to lunch a EC2:
 > style="width:6.29167in;height:2.53125in" />
 
 7.  Advanced Details: IAM Instance profile, Hostname Type (IP / Resource
-    Name), shutdown behavior, termination protection, user
-    data:<img src="./images/EC2/media/image7.png"
-    style="width:5.08403in;height:9in" />
+    Name), shutdown behavior, termination protection, user data:
+
+> <img src="./images/EC2/media/image7.png"
+> style="width:5.08403in;height:9in" />
 
 8.  Summary Launch Instance:<img src="./images/EC2/media/image8.png"
     style="width:6.5in;height:5.43681in" />
 
 ## EC2 Instance Types:
 
-## <img src="./images/EC2/media/image9.png"
-style="width:6.5in;height:3.3625in" />
+-   R: applications that needs a lot of RAM - in-memory cache
 
--   General Purpose
+-   C: applications that need good CPU - compute/database
 
-    -   Great for a diversity of workloads such as web servers or code
-        repositories •
+-   M: applications that are balanced - general / web app
 
-    -   Balance between:
+-   I: applications that need good local I/O - databases
 
-> • Compute
->
-> • Memory
->
-> • Networking
+-   G: applications that need GPU - video rendering / ML
+
+-   T2/T3 - burstable instances
+
+-   T2/T3 unlimited: unlimited burst
