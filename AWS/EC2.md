@@ -76,23 +76,6 @@ placement
 
 ## Placement Groups:
 
--   Sometimes we want to control how the EC2 instances are placed in the
-    AWS infrastructure
-
--   When we create a placement group, we can specify one of the
-    following placement strategies:
-
-    -   **Cluster** - cluster instances into a low-latency group in a
-        single AZ
-
-    -   **Spread** - spread instances across underlying hardware (max 7
-        instances per group per AZ)
-
-    -   **Partition** - spread instances across many different
-        partitions (which rely on different sets of racks) within an AZ.
-        Scale to 100s of EC2 instances per group (Hadoop, Cassandra,
-        Kafka)
-
 **Placement Groups - Cluster**
 
 -   Pros: Great network (10Gbps bandwidth between instances)
