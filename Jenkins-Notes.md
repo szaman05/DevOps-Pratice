@@ -144,7 +144,7 @@ A:
 
 -   Email Extension
 
-> <img src="./images/./Jenkins-Notes/media/image1.png"
+> <img src="./images/Jenkins-Notes/media/image1.png"
 > style="width:6.5in;height:5.19444in" />
 
 **Q: Can you explain the pipeline flow you made?**
@@ -176,11 +176,11 @@ A:
 2.  Under global tools select sonar scanner version and give it a name
 
 3.  Configure server and add sonarqube server url, save it
-    <img src="./images/./Jenkins-Notes/media/image2.png"
+    <img src="./images/Jenkins-Notes/media/image2.png"
     style="width:6.5in;height:4.8875in" />
 
 4.  Come back to configure server and sonqube add token generated in
-    sonarqube<img src="./images/./Jenkins-Notes/media/image3.png"
+    sonarqube<img src="./images/Jenkins-Notes/media/image3.png"
     style="width:6.5in;height:6.27014in" />
 
 5.  Remember at 1<sup>st</sup> you have to add the url to add the
