@@ -73,3 +73,77 @@ placement
 -   T2/T3 - burstable instances
 
 -   T2/T3 unlimited: unlimited burst
+
+## Placement Groups:
+
+-   Sometimes we want to control how the EC2 instances are placed in the
+    AWS infrastructure
+
+-   When we create a placement group, we can specify one of the
+    following placement strategies:
+
+    -   **Cluster** - cluster instances into a low-latency group in a
+        single AZ
+
+    -   **Spread** - spread instances across underlying hardware (max 7
+        instances per group per AZ)
+
+    -   **Partition** - spread instances across many different
+        partitions (which rely on different sets of racks) within an AZ.
+        Scale to 100s of EC2 instances per group (Hadoop, Cassandra,
+        Kafka)
+
+**Placement Groups - Cluster**
+
+-   Pros: Great network (10Gbps bandwidth between instances)
+
+-   Cons: if the rack fails, all instances fail at the time
+
+-   Use cases:
+
+    -   Big data job that needs to complete fast
+
+    -   Application that needs extremely low latency and high network
+        throughput
+
+**Placement Groups - Spread**
+
+-   Pros:
+
+    -   Can span across multiple AZs
+
+    -   Reduces risk for simultaneous failure
+
+    -   EC2 instances are on different hardware
+
+-   Cons:
+
+    -   Limited to 7 instances per AZ per placement group
+
+-   Use case:
+
+    -   Application that needs to maximize high availability
+
+    -   Critical applications where each instance must be isolated from
+        failure
+
+**Placement Groups - Partitions**
+
+-   Pros:
+
+    -   Up to 7 partitions per AZ
+
+    -   Can have hundreds of EC2 instances per AZ
+
+    -   The instances in a partition do not share racks with the
+        instances from other partitions
+
+    -   A partition failure can effect many instances but they wont
+        affect other partitions
+
+    -   Instances get access to the partition information as metadata
+
+-   Use cases: HDFS, HBase, Cassandra, Kafka
+
+<img src="./images/EC2/media/image9.png"
+style="width:6.5in;height:4.14514in" />
