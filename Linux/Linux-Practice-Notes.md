@@ -58,3 +58,6 @@ find . -type f -name "\*.docx" -print
 
 find . -type f -name "\*.docx" -print \| grep -Ev '\~' \| awk -F /
 '{print $NF}'
+
+<img src="./images/Linux-Practice-Notes/media/image6.png"
+style="width:5.875in;height:2.70833in" />
