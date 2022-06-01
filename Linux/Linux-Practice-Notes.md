@@ -1,7 +1,5 @@
 # Linux Important Commands Practice Notes:
 
-## 5/28/2022:
-
 ### \# cut commad:
 
 <img src="./images/Linux-Practice-Notes/media/image1.png"
@@ -16,8 +14,6 @@ Solution: grep -Ev '^#\|^$' mdConvert.sh \| wc -l
 
 <img src="./images/Linux-Practice-Notes/media/image2.png"
 style="width:6.04167in;height:3.51042in" />
-
-# 5/30/2022:
 
 #### \# sed command:
 
@@ -52,3 +48,13 @@ A:
 -   sed 12,18d mdConvert.sh
     <img src="./images/Linux-Practice-Notes/media/image5.png"
     style="width:6.5in;height:5.08194in" />
+
+*\# Find all the .docx file under current directory including sub
+directory*
+
+find . -type f -name "\*.docx" -print
+
+*\# Then Delete tmp(\~) files and print the file names only:*
+
+find . -type f -name "\*.docx" -print \| grep -Ev '\~' \| awk -F /
+'{print $NF}'
