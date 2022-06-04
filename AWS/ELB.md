@@ -18,6 +18,9 @@ AWS has 4 kinds of managed Load Balancers
 
 > • Operates at layer 3 (Network layer) – IP Protocol
 
+<img src="./images/ELB/media/image1.png"
+style="width:6.5in;height:5.73125in" />
+
 # Application Load Balancer (v2)
 
 -   Application load balancers is Layer 7 (HTTP)
@@ -48,9 +51,28 @@ AWS has 4 kinds of managed Load Balancers
 
 -   Routing based on Source IP.
 
-## ALB Target Groups: 
+# Network Load Balancer (v2) (Layer 4):
 
-<img src="./images/ELB/media/image1.png"
+## When to Use NLBs:
+
+-   Forward **TCP & UDP** traffic.
+
+-   Handle millions of requests per seconds. Used for **extreme
+    performance**, TCP or UDP traffic
+
+-   To achieve **low latency** \~100 ms (vs 400 ms for ALB).
+
+-   NLB has one static IP per AZ, and supports assigning Elastic IP but
+    **ALB does not support Elastic IP** (helpful for **whitelisting**
+    specific IP)
+
+## 
+
+## Target Groups: 
+
+Target Groups are same for any type of ELB, such as: ALB and NLB.
+
+<img src="./images/ELB/media/image2.png"
 style="width:6.5in;height:6.97708in" />
 
 1.  Instances
