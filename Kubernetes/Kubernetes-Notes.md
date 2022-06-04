@@ -77,3 +77,24 @@ Resources names must be unique within the ns.
 \#kubectl create ns kubekart
 
 \#kubectl run nginx –image=nginx -n kubekart
+
+Session 3:
+
+Q: How does 2 containers communicate inside the Pod?
+
+A: They share same network so they communicate localhost and port number
+of that service.
+
+So, its important they should not have any conflicting ports with each
+other. Important thing to mention if we attach any storage to the pod,
+they can also share the same storage.
+
+Q: What is the range of Node port in K8s?
+
+A: 30000 – 32767
+
+Q: What is Static Pods?
+
+A: Static pods are directly managed by node kubelet(nodes agent). Its
+visible from api server but not manageable. You have to keep your
+manifest file to /etc/Kubernetes/manifests
