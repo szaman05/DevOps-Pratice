@@ -51,7 +51,7 @@ style="width:6.5in;height:5.73125in" />
 
 -   Routing based on Source IP.
 
-# Network Load Balancer (v2) (Layer 4):
+# Network Load Balancer (v2) (**Layer 4**):
 
 ## When to Use NLBs:
 
@@ -66,11 +66,36 @@ style="width:6.5in;height:5.73125in" />
     **ALB does not support Elastic IP** (helpful for **whitelisting**
     specific IP)
 
-## 
+-   **Source IP directly forwarded to target. Target’s SG must allow
+    traffic from specific/ all source.**
+
+# Gateway Load Balancer:
+
+To analyze the traffic for any kind of malicious activities Gateway Load
+Balancer is used.
+
+-   Deploy, scale, and manage a fleet of 3rd party network virtual
+    appliances in AWS
+
+-   Example: Firewalls, Intrusion Detection and Prevention Systems, Deep
+    Packet Inspection
+
+-   Systems, payload manipulation, …
+
+-   Operates at **Layer 3** (Network Layer) – IP Packets
+
+Combines the following functions:
+
+-   Transparent Network Gateway – single entry/exit for all traffic
+
+-   Load Balancer – distributes traffic to your virtual appliances
+
+-   Uses the **GENEVE protocol on port 6081**
 
 ## Target Groups: 
 
-Target Groups are same for any type of ELB, such as: ALB and NLB.
+**Target Groups are same for any type of ELB but for NLB you can only
+choose TCP or UDP protocol.**
 
 <img src="./images/ELB/media/image2.png"
 style="width:6.5in;height:6.97708in" />
@@ -108,3 +133,38 @@ style="width:6.5in;height:6.97708in" />
 
 -   Facilitates using static IP addresses and PrivateLink with an
     Application Load Balancer.
+
+# Session Stickiness: 
+
+**Have to enable from edit attributes of Target Group after creation of
+the Target group.**
+
+2 Types of Stickiness are available:
+
+1.  Load Balancer Generated: Only duration based
+
+2.  Application-based cookie: Duration and App Cookie name need to be
+    provided.
+
+# Load balancing algorithm:
+
+**Have to enable from edit attributes of Target Group after creation of
+the Target group.**
+
+Determines how the load balancer selects targets from this target group
+when routing requests.
+
+-   Round robin (Default)
+
+-   Least outstanding requests: Cannot be combined with the Slow start
+    duration attribute.
+
+<img src="./images/ELB/media/image3.png"
+style="width:6.5in;height:6.5375in" />
+
+For NLB/TCP/UDP traffic Target Groups there is no Load Balancing
+Algorithm available and only can enable / disable Stickiness no
+additional options available.
+
+<img src="./images/ELB/media/image4.png"
+style="width:6.5in;height:4.84722in" />
