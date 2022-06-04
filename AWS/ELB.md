@@ -48,7 +48,9 @@ AWS has 4 kinds of managed Load Balancers
 
 -   Routing based on Source IP.
 
-## ALB Target Groups: <img src="./images/ELB/media/image1.png"
+## ALB Target Groups: 
+
+<img src="./images/ELB/media/image1.png"
 style="width:6.5in;height:6.97708in" />
 
 1.  Instances
