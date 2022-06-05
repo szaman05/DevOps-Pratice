@@ -168,3 +168,19 @@ additional options available.
 
 <img src="./images/ELB/media/image4.png"
 style="width:6.5in;height:4.84722in" />
+
+# Connection Draining or Deregistration Delay:
+
+-   CLB Connection Draining. ALB Deregistration Delay.
+
+-   Times provided to complete the existing clients established
+    connections.
+
+-   ELB stop sending new request for the de-registering or unhealthy
+    targets.
+
+-   Default is 300 second can set between 0 – 3600 sec. 0 means
+    disabled.
+
+<img src="./images/ELB/media/image5.png"
+style="width:6.5in;height:3.23889in" />
