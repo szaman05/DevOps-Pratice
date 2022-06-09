@@ -27,3 +27,15 @@ style="width:6.5in;height:3.38542in" />
 
 <img src="./images/K8s-Architecture/media/image6.png"
 style="width:6.5in;height:3.07292in" />
+
+# EKS Kubernetes Architecture:
+
+EKS only have additional Fargate Controller manager to deploy serverless
+workload but it let us focus on our application workloads only. We don’t
+need to worry about any of the following component. The diagram is for
+understanding only to create and manage the cluster but all the
+components are fully managed by AWS we will only configure them based on
+our requirement.
+
+<img src="./images/K8s-Architecture/media/image7.png"
+style="width:6.5in;height:3.39444in" />
