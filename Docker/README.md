@@ -17,3 +17,11 @@ docker container run --name vprodb -d -e MYSQL_ROOT_PASSWORD=secretpass
 docker exec -it vprodb /bin/bash
 
 ```
+
+3.  Show docker image information in json format:
+
+```
+
+docker inspect mysql:5.7
+
+```
