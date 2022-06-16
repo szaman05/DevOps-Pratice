@@ -12,4 +12,8 @@ docker container run --name vprodb -d -e MYSQL_ROOT_PASSWORD=secretpass
 
 2.  SSH to container:
 
-```docker exec -it vprodb /bin/bash```
+```
+
+docker exec -it vprodb /bin/bash
+
+```
