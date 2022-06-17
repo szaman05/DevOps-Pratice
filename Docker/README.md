@@ -5,12 +5,12 @@
 
 ```
 
-\#with directory binding:
+#with directory binding:
 
 docker container run --name vprodb -d -e MYSQL_ROOT_PASSWORD=secretpass
 -p 3030:3306 -v /home/ec2-user/vprodbdata:/var/lib/mysql mysql:5.7
 
-\#with volume mount:
+#with volume mount:
 
 docker run --name vprodb -d -e MYSQL_ROOT_PASSWORD=secretpass -p
 3030:3306 -v vprodb:/var/lib/mysql mysql:5.7
@@ -37,11 +37,11 @@ docker inspect mysql:5.7
 
 ```
 
-docker volume create vprodb \#Create Volume
+docker volume create vprodb #Create Volume
 
-docker volume ls \# show volume
+docker volume ls # show volume
 
-docker volume inspect vprodb \# describe volume
+docker volume inspect vprodb # describe volume
 
 ```
 
@@ -61,7 +61,7 @@ RUN apt update && apt install git -y
 
 RUN apt install apache2 -y
 
-CMD \["/usr/sbin/apache2ctl", "-D", "FOREGROUND"\]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
 
 EXPOSE 80
 
