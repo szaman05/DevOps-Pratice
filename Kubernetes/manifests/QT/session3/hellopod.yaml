@@ -1,0 +1,11 @@
+apiVersion: v1 #For Pod and Service apiVersion is v1
+kind: Pod # Yaml is case sensitive
+metadata: 
+  name: hello-pod # name must be unique accross the namespace.
+spec: 
+  containers: # is a array of containers. Array must be defined wtih -
+    - name: jenkins-co
+      image: jenkins/jenkins
+      ports:
+      - containerPort: 8080
+

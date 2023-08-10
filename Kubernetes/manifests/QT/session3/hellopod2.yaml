@@ -1,0 +1,17 @@
+apiVersion: v1 
+kind: Pod 
+metadata: 
+  name: nginx-mysql-po
+spec: # object called as pod-spec
+  containers:
+  - name: httpd-co
+    image: nginx
+    ports:
+    - containerPort: 80
+  - name: mysql-co
+    image: mysql:5.7 
+    ports:
+    - containerPort: 3306
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: '123456'
