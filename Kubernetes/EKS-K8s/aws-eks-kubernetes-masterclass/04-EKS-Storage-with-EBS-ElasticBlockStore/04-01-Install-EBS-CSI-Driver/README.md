@@ -68,3 +68,13 @@ kubectl apply -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernete
 # Verify ebs-csi pods running
 kubectl get pods -n kube-system
 ```
+## Step-05: Delete Amazon EBS CSI Driver  
+
+- Delete Amazon EBS CSI Driver
+```
+# Delete EBS CSI Driver
+kubectl delete -k "github.com/kubernetes-sigs/aws-ebs-csi-driver/deploy/kubernetes/overlays/stable/?ref=master"
+
+# Verify ebs-csi pods deleted
+kubectl get pods -n kube-system
+```
