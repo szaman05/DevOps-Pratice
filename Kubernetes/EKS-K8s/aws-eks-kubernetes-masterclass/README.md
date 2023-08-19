@@ -1,7 +1,5 @@
 # AWS EKS - Elastic Kubernetes Service - Masterclass
 
-[![Image](https://stacksimplify.com/course-images/AWS-EKS-Kubernetes-Masterclass-DevOps-Microservices-course.png "AWS EKS Kubernetes - Masterclass")
-
 ## Course Modules
 
 | S.No | AWS Service Name |
