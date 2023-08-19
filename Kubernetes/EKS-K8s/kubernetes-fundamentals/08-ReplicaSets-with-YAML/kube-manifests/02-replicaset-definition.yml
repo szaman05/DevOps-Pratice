@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: #metadata is a dictonary.
+  name: myapp2-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels: 
+      app: myapp2
+  template:
+    metadata:
+      name: myapp2-pod
+      labels: # Dictionary
+        app: myapp2 # Must Match with matchLabels.
+    spec: # Dictionary
+      containers: #List
+      - name: myapp2-container 
+        image: stacksimplify/kubenginx:2.0.0
+        ports: # List
+        - containerPort: 80

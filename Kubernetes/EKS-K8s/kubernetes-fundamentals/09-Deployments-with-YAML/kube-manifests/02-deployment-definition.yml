@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: #metadata is a dictonary.
+  name: myapp3-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels: 
+      app: myapp3
+  template:
+    metadata:
+      name: myapp3-pod
+      labels: # Dictionary
+        app: myapp3  # Must Match with matchLabels.
+    spec: # Dictionary
+      containers: #List
+      - name: myapp3-container 
+        image: stacksimplify/kubenginx:3.0.0
+        ports: # List
+        - containerPort: 80

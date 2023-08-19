@@ -1,0 +1,12 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass 
+metadata:
+  name: ebs-sc
+provisioner:
+  ebs.csi.aws.com
+volumeBindingMode: 
+  WaitForFirstConsumer
+  # This is the First Step:
+  # I have to create a Storage Class on EBS
+  # Next Have to Create a PVC 
+  # Than Have to create a Volume with PVC created under the POD spec.

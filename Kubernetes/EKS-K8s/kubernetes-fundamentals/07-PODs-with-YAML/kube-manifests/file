@@ -1,0 +1,4 @@
+01-kube-base-definition.yml
+02-pod-definition.yml
+03-pod-nodeport-service.yml
+file

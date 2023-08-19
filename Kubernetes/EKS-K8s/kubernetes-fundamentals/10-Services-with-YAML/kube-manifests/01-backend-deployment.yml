@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-restapp
+  labels:
+    app: backend-restapp
+    tier: backend 
+spec:
+  replicas: 03
+  selector:
+    matchLabels: 
+      app: backend-restapp
+  template:
+    metadata:
+      name: backend-restapp
+      labels: 
+        app: backend-restapp
+    spec:
+      containers:
+      - name: backend-restapp
+        image: stacksimplify/kebe-helloworld:1.0.0
+        ports:
+        - containerPort: 8080
