@@ -10,11 +10,16 @@ vagrant  pts/0    10.0.2.2         16:44   41.00s  0.02s  0.02s -bash
 vagrant  pts/1    10.0.2.2         16:44    0.00s  0.02s  0.00s w
 ```
 
-tee command is used to do the output and save in file togather:
+`tee` command is used to do the output and save in file togather `tee -a` will addpend to output:
 
 ```
 root@ubuntu2204:~# echo "Hello World!"|tee hello-world
 Hello World!
 root@ubuntu2204:~# cat hello-world 
 Hello World!
+root@ubuntu2204:~# echo "Hello World! again"|tee -a hello-world
+Hello World! again
+root@ubuntu2204:~# cat hello-world 
+Hello World!
+Hello World! again
 ```
