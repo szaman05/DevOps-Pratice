@@ -10,3 +10,4 @@ volumeBindingMode:
   # I have to create a Storage Class on EBS
   # Next Have to Create a PVC 
   # Than Have to create a Volume with PVC created under the POD spec.
+  

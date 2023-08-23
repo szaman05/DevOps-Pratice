@@ -1,11 +1,16 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
-metadata:
+metadata: 
   name: ebs-mysql-pv-claim
-spec: 
-  accessModes:
-    - ReadWriteOnce
+  
+spec:
+  # 1. Which SC will be used for this claim?
   storageClassName: ebs-sc
-  resources: 
+  # 2. How the access will be made?
+  accessModes: # Its a list of access ways
+    - ReadWriteOnce
+  # 3. What will be the capacity of the resources?
+  resources:
     requests:
       storage: 4Gi
+  

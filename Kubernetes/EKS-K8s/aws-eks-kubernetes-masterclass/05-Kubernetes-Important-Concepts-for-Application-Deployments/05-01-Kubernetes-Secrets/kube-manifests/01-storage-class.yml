@@ -2,5 +2,7 @@ apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata: 
   name: ebs-sc
+# spec: in Storage Class we will have provisioner and
+# volumeBindingMode instead of spec.
 provisioner: ebs.csi.aws.com
-volumeBindingMode: WaitForFirstConsumer 
+volumeBindingMode: WaitForFirstConsumer
