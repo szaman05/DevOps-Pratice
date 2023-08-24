@@ -31,6 +31,6 @@ spec:
 
 Label a Node:
 
-```shell
+```bash
 kubectl label nodes node-1 size=larze
 ```
