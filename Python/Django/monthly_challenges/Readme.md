@@ -22,7 +22,7 @@ touch urls.py
 
 add path to views page:
 
-```puthon
+```python
 from django.urls import path
 
 from . import views

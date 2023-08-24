@@ -1,0 +1,15 @@
+# K8s-Scheduling:
+
+```yaml
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: simple-webapp 
+  labels:
+    app: App1 function: Front-end
+spec:
+  containers:
+  - name: simple-webapp
+  image: simple-webapp ports:
+  - containerPort: 8080
+```
