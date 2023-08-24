@@ -26,3 +26,11 @@ spec:
     value: "myapp"
     effect: "NoSchedule"
 ```
+
+## Node Selectors:
+
+Label a Node:
+
+```shell
+kubectl label nodes node-1 size=larze
+```
