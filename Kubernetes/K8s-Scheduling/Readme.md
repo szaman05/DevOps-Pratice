@@ -50,5 +50,5 @@ spec:
   image: simple-webapp ports:
   - containerPort: 8080
   nodeSelector:
-    size:Large
+    size: Large
 ```
