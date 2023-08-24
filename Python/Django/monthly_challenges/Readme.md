@@ -22,7 +22,7 @@ touch urls.py
 
 add path to views page:
 
-```
+```puthon
 from django.urls import path
 
 from . import views
@@ -35,7 +35,7 @@ urlpatterns = [
 
 create the views:
 
-```
+```python
 from django.shortcuts import render
 from django.http import HttpResponse
 
