@@ -32,5 +32,23 @@ spec:
 Label a Node:
 
 ```bash
-kubectl label nodes node-1 size=larze
+kubectl label nodes node-1 size=Large
+```
+
+Node Selctor for the pod:
+
+```yaml
+apiVersion: v1 
+kind: Pod 
+metadata:
+  name: simple-webapp 
+  labels:
+    app: App1 function: Front-end
+spec:
+  containers:
+  - name: simple-webapp
+  image: simple-webapp ports:
+  - containerPort: 8080
+  nodeSelector:
+    size:Large
 ```
