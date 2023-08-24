@@ -1,6 +1,6 @@
 # Linux Basic Command:
 
-w command will show all the user corrently logged into the system:
+`w` command will show all the user corrently logged into the system:
 
 ```shell
 vagrant@ubuntu2204:~$ w
@@ -23,3 +23,5 @@ root@ubuntu2204:~# cat hello-world
 Hello World!
 Hello World! again
 ```
+
+`cut` is text porcessing command: (Will start from here next session)
