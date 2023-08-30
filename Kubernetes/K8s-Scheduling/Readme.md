@@ -52,3 +52,5 @@ spec:
   nodeSelector:
     size: Large
 ```
+
+## Node Affinity:
